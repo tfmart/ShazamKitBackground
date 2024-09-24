@@ -6,14 +6,84 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		7C5CE9472CA32DE200780B9C /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C5CE9462CA32DE200780B9C /* WidgetKit.framework */; };
+		7C5CE9492CA32DE200780B9C /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C5CE9482CA32DE200780B9C /* SwiftUI.framework */; };
+		7C5CE9562CA32DE300780B9C /* ShazamKitBackgroundWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 7C5CE9442CA32DE200780B9C /* ShazamKitBackgroundWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7C5CE9542CA32DE300780B9C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7C5CE9252CA32BC000780B9C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7C5CE9432CA32DE200780B9C;
+			remoteInfo = ShazamKitBackgroundWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		7C5CE95B2CA32DE300780B9C /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				7C5CE9562CA32DE300780B9C /* ShazamKitBackgroundWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		7C5CE92D2CA32BC000780B9C /* ShazamKitBackground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShazamKitBackground.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C5CE9442CA32DE200780B9C /* ShazamKitBackgroundWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ShazamKitBackgroundWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C5CE9462CA32DE200780B9C /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		7C5CE9482CA32DE200780B9C /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		7C5CE93F2CA32BD600780B9C /* Exceptions for "ShazamKitBackground" folder in "ShazamKitBackground" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 7C5CE92C2CA32BC000780B9C /* ShazamKitBackground */;
+		};
+		7C5CE95A2CA32DE300780B9C /* Exceptions for "ShazamKitBackgroundWidget" folder in "ShazamKitBackgroundWidgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 7C5CE9432CA32DE200780B9C /* ShazamKitBackgroundWidgetExtension */;
+		};
+		7C5CE95D2CA330C900780B9C /* Exceptions for "ShazamKitBackgroundWidget" folder in "ShazamKitBackground" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				ShazamKitBackgroundWidgetAttributes.swift,
+				ShazamKitBackgroundWidgetLiveActivity.swift,
+			);
+			target = 7C5CE92C2CA32BC000780B9C /* ShazamKitBackground */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		7C5CE92F2CA32BC000780B9C /* ShazamKitBackground */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				7C5CE93F2CA32BD600780B9C /* Exceptions for "ShazamKitBackground" folder in "ShazamKitBackground" target */,
+			);
 			path = ShazamKitBackground;
+			sourceTree = "<group>";
+		};
+		7C5CE94A2CA32DE200780B9C /* ShazamKitBackgroundWidget */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				7C5CE95D2CA330C900780B9C /* Exceptions for "ShazamKitBackgroundWidget" folder in "ShazamKitBackground" target */,
+				7C5CE95A2CA32DE300780B9C /* Exceptions for "ShazamKitBackgroundWidget" folder in "ShazamKitBackgroundWidgetExtension" target */,
+			);
+			path = ShazamKitBackgroundWidget;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -26,6 +96,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7C5CE9412CA32DE200780B9C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7C5CE9492CA32DE200780B9C /* SwiftUI.framework in Frameworks */,
+				7C5CE9472CA32DE200780B9C /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -33,6 +112,8 @@
 			isa = PBXGroup;
 			children = (
 				7C5CE92F2CA32BC000780B9C /* ShazamKitBackground */,
+				7C5CE94A2CA32DE200780B9C /* ShazamKitBackgroundWidget */,
+				7C5CE9452CA32DE200780B9C /* Frameworks */,
 				7C5CE92E2CA32BC000780B9C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,8 +122,18 @@
 			isa = PBXGroup;
 			children = (
 				7C5CE92D2CA32BC000780B9C /* ShazamKitBackground.app */,
+				7C5CE9442CA32DE200780B9C /* ShazamKitBackgroundWidgetExtension.appex */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		7C5CE9452CA32DE200780B9C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7C5CE9462CA32DE200780B9C /* WidgetKit.framework */,
+				7C5CE9482CA32DE200780B9C /* SwiftUI.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -55,10 +146,12 @@
 				7C5CE9292CA32BC000780B9C /* Sources */,
 				7C5CE92A2CA32BC000780B9C /* Frameworks */,
 				7C5CE92B2CA32BC000780B9C /* Resources */,
+				7C5CE95B2CA32DE300780B9C /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				7C5CE9552CA32DE300780B9C /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				7C5CE92F2CA32BC000780B9C /* ShazamKitBackground */,
@@ -69,6 +162,28 @@
 			productName = ShazamKitBackground;
 			productReference = 7C5CE92D2CA32BC000780B9C /* ShazamKitBackground.app */;
 			productType = "com.apple.product-type.application";
+		};
+		7C5CE9432CA32DE200780B9C /* ShazamKitBackgroundWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7C5CE9572CA32DE300780B9C /* Build configuration list for PBXNativeTarget "ShazamKitBackgroundWidgetExtension" */;
+			buildPhases = (
+				7C5CE9402CA32DE200780B9C /* Sources */,
+				7C5CE9412CA32DE200780B9C /* Frameworks */,
+				7C5CE9422CA32DE200780B9C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				7C5CE94A2CA32DE200780B9C /* ShazamKitBackgroundWidget */,
+			);
+			name = ShazamKitBackgroundWidgetExtension;
+			packageProductDependencies = (
+			);
+			productName = ShazamKitBackgroundWidgetExtension;
+			productReference = 7C5CE9442CA32DE200780B9C /* ShazamKitBackgroundWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -81,6 +196,9 @@
 				LastUpgradeCheck = 1600;
 				TargetAttributes = {
 					7C5CE92C2CA32BC000780B9C = {
+						CreatedOnToolsVersion = 16.0;
+					};
+					7C5CE9432CA32DE200780B9C = {
 						CreatedOnToolsVersion = 16.0;
 					};
 				};
@@ -100,12 +218,20 @@
 			projectRoot = "";
 			targets = (
 				7C5CE92C2CA32BC000780B9C /* ShazamKitBackground */,
+				7C5CE9432CA32DE200780B9C /* ShazamKitBackgroundWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		7C5CE92B2CA32BC000780B9C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7C5CE9422CA32DE200780B9C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -122,7 +248,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7C5CE9402CA32DE200780B9C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7C5CE9552CA32DE300780B9C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7C5CE9432CA32DE200780B9C /* ShazamKitBackgroundWidgetExtension */;
+			targetProxy = 7C5CE9542CA32DE300780B9C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		7C5CE9392CA32BC100780B9C /* Debug */ = {
@@ -255,6 +396,9 @@
 				DEVELOPMENT_TEAM = ZTGHLM6H83;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ShazamKitBackground/Info.plist;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "To listen and identify music with ShazamKit";
+				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -284,6 +428,9 @@
 				DEVELOPMENT_TEAM = ZTGHLM6H83;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ShazamKitBackground/Info.plist;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "To listen and identify music with ShazamKit";
+				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -296,6 +443,60 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = tfmartins.ShazamKitBackground;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		7C5CE9582CA32DE300780B9C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZTGHLM6H83;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ShazamKitBackgroundWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ShazamKitBackgroundWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = tfmartins.ShazamKitBackground.ShazamKitBackgroundWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7C5CE9592CA32DE300780B9C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZTGHLM6H83;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ShazamKitBackgroundWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ShazamKitBackgroundWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = tfmartins.ShazamKitBackground.ShazamKitBackgroundWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -319,6 +520,15 @@
 			buildConfigurations = (
 				7C5CE93C2CA32BC100780B9C /* Debug */,
 				7C5CE93D2CA32BC100780B9C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7C5CE9572CA32DE300780B9C /* Build configuration list for PBXNativeTarget "ShazamKitBackgroundWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7C5CE9582CA32DE300780B9C /* Debug */,
+				7C5CE9592CA32DE300780B9C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
