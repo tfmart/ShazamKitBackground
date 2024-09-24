@@ -41,7 +41,11 @@ struct ShazamKitBackgroundWidgetLiveActivity: Widget {
             } compactTrailing: {
                 Image(systemName: "waveform.badge.mic")
             } minimal: {
-                Image(systemName: "waveform.badge.mic")
+                if context.state.title != nil, context.state.artist != nil {
+                    Image(systemName: "checkmark")
+                } else {
+                    Image(systemName: "magnifyingglass")
+                }
             }
             .widgetURL(URL(string: "http://www.apple.com"))
             .keylineTint(Color.red)
